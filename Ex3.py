@@ -1,16 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-Word = input("Введите текст ")
+Word = input("Введите предложение:")
 s = len(Word)
-mx = 0
-k = 0
 for i in range(s):
-    if Word[i] == ' ' and Word[i+1] == ' ':
-        k += 1
-    else:
-        if k > mx:
-            mx = k
-            k = 0
-print("Количество пробелов подряд", mx)
+    if Word[i] == 'C' or Word[i] == 'c' or Word[i] == 'С' or Word[i] == 'с':
+        Word = Word.replace(Word[i], ' ')
+print(Word)
+
 
 
 
